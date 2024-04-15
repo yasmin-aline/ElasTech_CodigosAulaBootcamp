@@ -1,21 +1,16 @@
-package array;
-
-import java.util.ArrayList;
-import java.util.Scanner;
+package calculos;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner leitura = new Scanner (System.in);
-        ArrayList<String> nomes = new ArrayList<>();
-
-        System.out.println("Digite um nome");
-        String nome_recebido = leitura.nextLine();
-        nomes.add(nome_recebido);
-
-        for(String nome : nomes){
-            System.out.println(nome);
-        }
-        System.out.println(nomes.get(0));
-
+        int n1 = 10, n2 = 12;
+        int soma = n1 + n2;
+        int subtracao =  n1 - n2;
+        System.out.println(subtracao);
+        int multiplicao = n1 * n2;
+        double divisao = (double) n1 / n2;
+        int modulo = n1 % n2;
+        double potencia = Math.pow(n1, n2);
+        double raizquadrada = Math.sqrt(n1);
+        int calculo = ((n1 + n2) * ( n1 + n2))*9;
     }
 }
