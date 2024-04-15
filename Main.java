@@ -1,16 +1,37 @@
-package calculos;
+package variaveis;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int n1 = 10, n2 = 12;
-        int soma = n1 + n2;
-        int subtracao =  n1 - n2;
-        System.out.println(subtracao);
-        int multiplicao = n1 * n2;
-        double divisao = (double) n1 / n2;
-        int modulo = n1 % n2;
-        double potencia = Math.pow(n1, n2);
-        double raizquadrada = Math.sqrt(n1);
-        int calculo = ((n1 + n2) * ( n1 + n2))*9;
+        Scanner leitura = new Scanner(System.in);
+
+        int idade, idade_animal, numero;
+        idade = 18;
+        idade_animal = 20;
+        numero = 50;
+        idade = leitura.nextInt();
+
+        double altura, altura_pessoa;
+        altura = 1.76;
+        altura = leitura.nextDouble();
+
+        boolean status = true;
+
+        char letra = 'h';
+
+
+        String nome_completo = "Rafael";
+        nome_completo = leitura.nextLine();
+
+        int[] numeros = {1, 2, 4,5,6};
+        numeros[1] = 1;
+        numeros[1] = 2;
+        for(int i = 0; i < 5 ; i++){
+            System.out.println(numeros[i]);
+        }
+
+
+
     }
 }
