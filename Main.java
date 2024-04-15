@@ -1,41 +1,42 @@
-package estrutura_decisao;
+package estrutura_repeticao;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int idade = 20;
-        if (idade > 18) {
-            //System.out.println("voce é maior de idade");
-        } else if (idade < 5) {
-            // System.out.println(" entrou aqui ");
-        } else if (idade < 5) {
-            //System.out.println(" entrou aqui ");
-        } else if (idade < 5) {
-            //System.out.println(" entrou aqui ");
-        } else {
-            //System.out.println(" entrou na ultima verificacao");
+      /*  Scanner leitura = new Scanner(System.in);
+        int i, numero, conta_par = 0, soma_par = 0;
+        for(i = 0; i < 10 ; i++){
+            System.out.println("Digite um numero");
+            numero = leitura.nextInt();
+            if(numero%2 == 0){
+                conta_par++;
+                //conta_par = conta_par + 1
+                // conta_par = 0 + 1 = 1
+                // conta_par = 1 + 1 = 2
+                // conta_par = 2 + 1 = 3
+                soma_par = soma_par + numero;
+                //soma_par = 0 + 10 = 10
+                // soma_par= 10 + 2 = 12
+
+            }
         }
-        Scanner leitura = new Scanner(System.in);
-
-        char operacao = '+';
-
-        int n1 = 10, n2 = 12, resultado;
-        switch (operacao) {
-            case '+':
-                resultado = n1 + n2;
-                System.out.println("o resultado da soma = " + resultado);
-                break;
-
-            case '-':
-                resultado = n1 - n2;
-                System.out.println("o resultado da subtração = "+ resultado);
-                break;
-
-            default:
-                System.out.println("voce digitou um caractere invalida");
-
+        System.out.println(" voce digitou "+ conta_par + " numeros pares e a soma deles é " + soma_par);
+*/
+        int i;
+        i = 0;
+        while (i < 5){
+            System.out.println(i);
+            i++;
         }
+        System.out.println(" ++++++++++++++++++++++++++++++++++++++++++++++ ");
+        i = 0;
+        do{
+
+            System.out.println(i);
+            i++;
+        }while (i < 5);
+
 
 
     }
