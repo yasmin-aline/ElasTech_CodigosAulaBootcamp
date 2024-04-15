@@ -1,36 +1,41 @@
-package variaveis;
+package estrutura_decisao;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        int idade = 20;
+        if (idade > 18) {
+            //System.out.println("voce é maior de idade");
+        } else if (idade < 5) {
+            // System.out.println(" entrou aqui ");
+        } else if (idade < 5) {
+            //System.out.println(" entrou aqui ");
+        } else if (idade < 5) {
+            //System.out.println(" entrou aqui ");
+        } else {
+            //System.out.println(" entrou na ultima verificacao");
+        }
         Scanner leitura = new Scanner(System.in);
 
-        int idade, idade_animal, numero;
-        idade = 18;
-        idade_animal = 20;
-        numero = 50;
-        idade = leitura.nextInt();
+        char operacao = '+';
 
-        double altura, altura_pessoa;
-        altura = 1.76;
-        altura = leitura.nextDouble();
+        int n1 = 10, n2 = 12, resultado;
+        switch (operacao) {
+            case '+':
+                resultado = n1 + n2;
+                System.out.println("o resultado da soma = " + resultado);
+                break;
 
-        boolean status = true;
+            case '-':
+                resultado = n1 - n2;
+                System.out.println("o resultado da subtração = "+ resultado);
+                break;
 
-        char letra = 'h';
+            default:
+                System.out.println("voce digitou um caractere invalida");
 
-
-        String nome_completo = "Rafael";
-        nome_completo = leitura.nextLine();
-
-        int[] numeros = {1, 2, 4,5,6};
-        numeros[1] = 1;
-        numeros[1] = 2;
-        for(int i = 0; i < 5 ; i++){
-            System.out.println(numeros[i]);
         }
-
 
 
     }
