@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Continente {
+    private String nome;
+    private List<Pais> paises;
+
+    public Continente(String nome) {
+        this.nome = nome;
+        this.paises = new ArrayList<>();
+    }
+
+    public void addPais(Pais pais) {
+        this.paises.add(pais);
+    }
+
+    public int getDimensaoTotal() {
+        return this.paises.stream().mapToInt(Pais::getDimensao).sum();
+    }
+
+    public long getPopulacaoTotal() {
+        return this.paises.stream().mapToLong(Pais::getPopulacao).sum();
+    }
+
+    public double getDensidadePopulacional() {
+        return (double) this.getPopulacaoTotal() / this.getDimensaoTotal();
+    }
+
+    public Pais getPaisMaiorPopulacao() {
+        return Collections.max(this.paises, (o1, o2) -> Long.compare(o1.getPopulacao(), o2.getPopulacao()));
+    }
+
+    public Pais getPaisMenorPopulacao() {
+        return Collections.min(this.paises, (o1, o2) -> Long.compare(o1.getPopulacao(), o2.getPopulacao()));
+    }
+
+    public Pais getPaisMaiorDimensao() {
+        return Collections.max(this.paises, (o1, o2) -> Integer.compare(o1.getDimensao(), o2.getDimensao()));
+    }
+
+    public Pais getPaisMenorDimensao() {
+        return Collections.min(this.paises, (o1, o2) -> Integer.compare(o1.getDimensao(), o2.getDimensao()));
+    }
+
+    public double getRazaoTerritorial() {
+        Pais paisMaiorDimensao = this.getPaisMaiorDimensao();
+        Pais paisMenorDimensao = this.getPaisMenorDimensao();
+        return (double) paisMaiorDimensao.getDimensao() / paisMenorDimensao.getDimensao();
+    }
+}
