@@ -1,0 +1,23 @@
+public class Pais {
+    private String nome;
+    private int dimensao;
+    private long populacao;
+
+    public Pais(String nome, int dimensao, long populacao) {
+        this.nome = nome;
+        this.dimensao = dimensao;
+        this.populacao = populacao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getDimensao() {
+        return dimensao;
+    }
+
+    public long getPopulacao() {
+        return populacao;
+    }
+}
